@@ -53,5 +53,5 @@ class RandomForest(object):
                 results[key]+=1
                 count+=1
             Y.append(max(results,key=results.get))
-            conf.append(Y[-1]/count)
+            conf.append(results[Y[-1]]/count)
         return (Y, conf)

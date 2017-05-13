@@ -85,4 +85,4 @@ class logistic(object):
         list with labels, and conf being 1 dimensional list with
         confidences for each of the labels.
         """
-        return [0 if self.beta.dot(x)>0 else 1 for x in X]
+        return [1 if self.beta.dot(x)>0 else 0 for x in X]
